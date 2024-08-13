@@ -1,4 +1,4 @@
- "use client"
+ "use "
  
  import Header from '../components/Header';
  import Books from '../components/books';

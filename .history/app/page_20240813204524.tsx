@@ -1,6 +1,8 @@
+ "use client"
  
+ import Header from '.components/Header';
  import Header from "@/pages/Header"
- import Books from "@/pages/Books"
+ import Books from '../components/Books';
 
 
 

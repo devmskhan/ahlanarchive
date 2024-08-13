@@ -1,4 +1,4 @@
- import Header from '../components/Header';
+ import Header from ''../components/header'
  import Books from '../components/books';
 
 
@@ -8,6 +8,7 @@ export default function Home() {
     <main className="bg-gray-100 min-h-screen">
       <Header />
       <Books />
+      
     </main>
   );
 }

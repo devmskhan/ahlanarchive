@@ -1,9 +1,15 @@
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
+import Header from "@/pages/Header";
+import CustomPagination from "@/components/CustomPagination";
+import "./globals.css";
 
-function Books() {
+
+function Edubooks() {
     return (
-        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <main className="bg-gray-300 min-h-screen">
+            <Header />
+            <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {[
                 { src: "/1.jpg", alt: "pic1", title: "Structure and Interpretation of Computer Programs (MIT Electrical Engineering and Computer Science)" },
                 { src: "/2.jpg", alt: "pic2", title: "Algorithms with JULIA" },
@@ -20,7 +26,6 @@ function Books() {
                 { src: "/13.jpg", alt: "pic13", title: "The Book Collection React JS" },
                 { src: "/14.jpg", alt: "pic14", title: "React js For Beginners" },
                 { src: "/15.jpg", alt: "pic15", title: "PyTorch Pocket Reference" },
-                { src: "/16.jpg", alt: "pic16", title: "Build a Large Language Model" },
             ].map((book, index) => (
                 <div key={index} className="bg-white relative flex flex-col items-center justify-between p-6 m-5 shadow-md rounded-md">
                     <Image src={book.src} alt={book.alt} height={150} width={150} className="mb-4"/>
@@ -30,8 +35,13 @@ function Books() {
                     </Button>
                 </div>
             ))}
+            <CustomPagination />
         </div>
-    );
-}
+      
 
-export default Books;
+        </main>
+
+    )
+};
+
+export default Edubooks;

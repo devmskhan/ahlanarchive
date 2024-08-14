@@ -20,7 +20,7 @@ function Books() {
                 { src: "/13.jpg", alt: "pic13", title: "The Book Collection React JS" },
                 { src: "/14.jpg", alt: "pic14", title: "React js For Beginners" },
                 { src: "/15.jpg", alt: "pic15", title: "PyTorch Pocket Reference" },
-                { src: "/16.jpg", alt: "pic16", title: "Build a Large Language Model" },
+                { src: "/216.jpg", alt: "pic216", title: "Guns, Germs, and Steel: The Fates of Human Societies" },
             ].map((book, index) => (
                 <div key={index} className="bg-white relative flex flex-col items-center justify-between p-6 m-5 shadow-md rounded-md">
                     <Image src={book.src} alt={book.alt} height={150} width={150} className="mb-4"/>

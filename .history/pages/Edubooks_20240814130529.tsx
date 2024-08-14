@@ -1,15 +1,21 @@
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
+import Header from "@/pages/Header";
+import CustomPagination from "@/components/CustomPagination";
+import "./globals.css";
 
-function Books() {
+
+function Edubooks() {
     return (
-        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <main className="bg-gray-300 min-h-screen">
+            <Header />
+            <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {[
-                { src: "/1.jpg", alt: "pic1", title: "Structure and Interpretation of Computer Programs (MIT Electrical Engineering and Computer Science)" },
-                { src: "/2.jpg", alt: "pic2", title: "Algorithms with JULIA" },
-                { src: "/3.jpg", alt: "pic3", title: "Algorithms in Advanced AI" },
-                { src: "/4.jpg", alt: "pic4", title: "The C Programming Language" },
-                { src: "/5.jpg", alt: "pic5", title: "Programming Pearls" },
+                { src: "/21.jpg", alt: "pic21", title: "Principles of Mathematical Analysis" },
+                { src: "/22.jpg", alt: "pic22", title: "The Feynman Lectures on Physics Vol 1" },
+                { src: "/23.jpg", alt: "pic23", title: "Modern Classical Mechanics" },
+                { src: "/24.jpg", alt: "pic24", title: "Prolegomena to Relativity Economics: An Elementary Study in the Mechanics and Organics of an Expanding Economic Universe" },
+                { src: "/25.jpg", alt: "pic25", title: "The Principles of Quantum Mechanics" },
                 { src: "/6.jpg", alt: "pic6", title: "Effective Java" },
                 { src: "/7.jpg", alt: "pic7", title: "Eloquent JavaScript, 4th Edition" },
                 { src: "/8.jpg", alt: "pic8", title: "Python Crash Course, 3rd Edition" },
@@ -20,7 +26,6 @@ function Books() {
                 { src: "/13.jpg", alt: "pic13", title: "The Book Collection React JS" },
                 { src: "/14.jpg", alt: "pic14", title: "React js For Beginners" },
                 { src: "/15.jpg", alt: "pic15", title: "PyTorch Pocket Reference" },
-                { src: "/16.jpg", alt: "pic16", title: "Build a Large Language Model" },
             ].map((book, index) => (
                 <div key={index} className="bg-white relative flex flex-col items-center justify-between p-6 m-5 shadow-md rounded-md">
                     <Image src={book.src} alt={book.alt} height={150} width={150} className="mb-4"/>
@@ -31,7 +36,11 @@ function Books() {
                 </div>
             ))}
         </div>
-    );
-}
+        <CustomPagination />
 
-export default Books;
+        </main>
+
+    )
+};
+
+export default Edubooks;

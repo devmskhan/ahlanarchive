@@ -32,7 +32,7 @@ function Edubooks() {
                     <Image src={book.src} alt={book.alt} height={150} width={150} className="mb-4"/>
                     <h4 className="text-center text-lg font-semibold mb-4">{book.title}</h4>
                     <Button className="bg-amber-700 text-gray-300 py-2 px-4 mt-auto w-full" variant="outline">
-                        Rent
+                        Re
                     </Button>
                 </div>
             ))}
